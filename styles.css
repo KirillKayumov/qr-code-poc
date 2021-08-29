@@ -1,0 +1,136 @@
+@font-face {
+  font-family: 'Nasalization';
+
+  src: url('./fonts/2ea7ee49-8830-45f0-95af-2c1aff85c66a.woff2') format('woff2'),
+    url('./fonts/39026907-6aaf-45fc-96c3-555f6a7d9ce4.woff') format('woff');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.frame {
+  background-color: #1f71de;
+  border-radius: 10px;
+  width: max-content;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.qr-code {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 10px;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+
+  /* margin: 50px; */
+  position: relative;
+  /* width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content; */
+  /* height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content; */
+  border-radius: 10px;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.col {
+  width: 10px;
+  height: 10px;
+  margin: 0 1px;
+  padding: 1px 0;
+}
+
+.filled {
+  background-color: black;
+}
+
+.dot {
+  border-radius: 5px;
+  padding: 0;
+}
+
+.line_head {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.line_tail {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.edge {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  border: 12px black solid;
+  border-radius: 30px;
+}
+
+.edge--top-left {
+  left: 20px;
+  top: 20px;
+}
+
+.edge--top-right {
+  right: 20px;
+  top: 20px;
+}
+
+.edge--bottom-left {
+  left: 20px;
+  bottom: 20px;
+}
+
+.inner-edge {
+  width: 37px;
+  height: 37px;
+  background-color: black;
+  margin: 12px auto;
+  border-radius: 10px;
+}
+
+.logo {
+  position: absolute;
+  left: calc(50% - 40px);
+  top: calc(50% - 40px);
+}
+
+.branding {
+  font-family: Nasalization;
+  text-transform: uppercase;
+  font-size: 44px;
+  color: white;
+  letter-spacing: .3em;
+  line-height: 50px;
+}
+
+.number {
+  font-family: Nasalization;
+  text-transform: uppercase;
+  font-size: 44px;
+  color: white;
+  letter-spacing: 0;
+  line-height: 44px;
+}

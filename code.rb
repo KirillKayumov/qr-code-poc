@@ -10,6 +10,7 @@ require 'rqrcode_core'
 require 'pry'
 require 'erb'
 
+# qr = RQRCodeCore::QRCode.new("https://www.uula.com/backend/countries/1/schools/1/courses/1/quizzes/1/questions/1")
 qr = RQRCodeCore::QRCode.new("https://www.uula.com")
 qr_size = qr.modules.size
 
