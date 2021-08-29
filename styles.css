@@ -1,6 +1,10 @@
 .content {
   display: flex;
   flex-direction: column;
+  margin: 10px;
+  position: relative;
+  width: max-content;
+  height: max-content;
 }
 
 .row {
@@ -28,7 +32,38 @@
   border-top-right-radius: 5px;
 }
 
-.line_tail{
+.line_tail {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+}
+
+.edge {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  border: 12px black solid;
+  border-radius: 30px;
+}
+
+.edge--top-left {
+  left: 0;
+  top: 0;
+}
+
+.edge--top-right {
+  right: 0;
+  top: 0;
+}
+
+.edge--bottom-left {
+  left: 0;
+  bottom: 0;
+}
+
+.inner-edge {
+  width: 37px;
+  height: 37px;
+  background-color: black;
+  margin: 12px auto;
+  border-radius: 10px;
 }

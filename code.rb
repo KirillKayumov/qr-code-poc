@@ -10,7 +10,7 @@ require 'rqrcode_core'
 require 'pry'
 require 'erb'
 
-qr = RQRCodeCore::QRCode.new("https://www.uulastaging.com/backend/courses/95/quizzes/207/questions/398/edit")
+qr = RQRCodeCore::QRCode.new("https://www.uula.com")
 qr_size = qr.modules.size
 
 vertical_lines_info = Array.new(qr_size).map { Array.new(qr_size) }
@@ -36,6 +36,10 @@ end
 
 qr_html = qr.modules.map.with_index do |row, row_index|
   row_html = row.map.with_index do |col, col_index|
+    next "<div class=\"col\"></div>" if (0..6).include?(row_index) && (0..6).include?(col_index)
+    next "<div class=\"col\"></div>" if (0..6).include?(row_index) && ((qr_size - 7)..(qr_size - 1)).include?(col_index)
+    next "<div class=\"col\"></div>" if ((qr_size - 7)..(qr_size - 1)).include?(row_index) && (0..6).include?(col_index)
+
     "<div class=\"col #{col ? 'filled' : ''} #{vertical_lines_info[row_index][col_index]}\"></div>"
   end.join
 
