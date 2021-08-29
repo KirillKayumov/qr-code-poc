@@ -10,8 +10,25 @@
 .col {
   width: 10px;
   height: 10px;
+  margin: 0 1px;
+  padding: 1px 0;
 }
 
 .filled {
   background-color: black;
+}
+
+.dot {
+  border-radius: 5px;
+  padding: 0;
+}
+
+.line_head {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.line_tail{
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
