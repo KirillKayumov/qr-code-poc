@@ -1,0 +1,17 @@
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+}
+
+.col {
+  width: 10px;
+  height: 10px;
+}
+
+.filled {
+  background-color: black;
+}
