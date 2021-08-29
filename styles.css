@@ -12,7 +12,7 @@ body {
 
 .frame {
   background-color: #1f71de;
-  border-radius: 10px;
+  border-radius: 20px;
   width: max-content;
   padding: 15px;
   display: flex;
@@ -41,7 +41,7 @@ body {
   /* height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content; */
-  border-radius: 10px;
+  border-radius: 20px;
 }
 
 .row {
