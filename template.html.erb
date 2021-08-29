@@ -1,11 +1,111 @@
 <html>
   <head>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+      .content {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+
+        margin: 50px;
+        position: relative;
+        width: -webkit-max-content;
+        width: -moz-max-content;
+        width: max-content;
+        height: -webkit-max-content;
+        height: -moz-max-content;
+        height: max-content;
+
+        width: 348px;
+      }
+
+      .row {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+      }
+
+      .col {
+        width: 10px;
+        height: 10px;
+        margin: 0 1px;
+        padding: 1px 0;
+      }
+
+      .filled {
+        background-color: black;
+      }
+
+      .dot {
+        border-radius: 5px;
+        padding: 0;
+      }
+
+      .line_head {
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+      }
+
+      .line_tail {
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+
+      .edge {
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        border: 12px black solid;
+        border-radius: 30px;
+      }
+
+      .edge--top-left {
+        left: 0;
+        top: 0;
+      }
+
+      .edge--top-right {
+        right: 0;
+        top: 0;
+      }
+
+      .edge--bottom-left {
+        left: 0;
+        bottom: 0;
+      }
+
+      .inner-edge {
+        width: 37px;
+        height: 37px;
+        background-color: black;
+        margin: 12px auto;
+        border-radius: 10px;
+      }
+
+      .logo {
+        position: absolute;
+        left: calc(50% - 40px);
+        top: calc(50% - 40px);
+      }
+    </style>
   </head>
+
   <body class="content">
     <%= qr_html %>
     <div class="edge edge--top-left"><div class="inner-edge"></div></div>
     <div class="edge edge--top-right"><div class="inner-edge"></div></div>
     <div class="edge edge--bottom-left"><div class="inner-edge"></div></div>
+
+    <svg class="logo" width="80" height="80" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M328.003 56.6454C331.438 62.6698 331.439 70.0928 328.005 76.1171L139.653 406.608C136.221 412.63 129.878 416.341 123.013 416.341H100.152C85.3572 416.341 76.1131 400.114 83.5142 387.136L283.366 36.7276C290.764 23.7575 309.244 23.7575 316.642 36.7276L328.003 56.6454Z" fill="#2072E0"/>
+      <path d="M33.5389 532.731C18.7442 532.731 9.49924 516.505 16.9003 503.527L27.9845 484.094C31.4276 478.056 37.7963 474.345 44.6799 474.366L155.344 474.705C162.219 474.726 168.582 471.024 172.028 464.998L350.199 153.462C357.607 140.51 376.072 140.521 383.464 153.482L394.652 173.098C398.085 179.117 398.088 186.534 394.662 192.557L272.893 406.578C269.457 412.617 269.47 420.057 272.929 426.083L295.063 464.651C298.504 470.645 304.831 474.332 311.676 474.332H333.903C348.695 474.332 357.939 458.111 350.543 445.133L339.453 425.674C336.02 419.652 336.02 412.231 339.453 406.208L416.858 270.39C424.253 257.414 442.738 257.411 450.137 270.384L516.494 386.73C523.896 399.707 514.651 415.935 499.856 415.935H478.215C471.381 415.935 465.06 412.257 461.617 406.277L450.149 386.361C442.735 373.484 424.368 373.484 416.954 386.361L405.573 406.126C402.082 412.187 402.082 419.682 405.573 425.743L427.99 464.674C431.434 470.655 437.754 474.332 444.588 474.332H555.367C562.23 474.332 568.572 478.04 572.006 484.06L583.108 503.527C590.509 516.505 581.265 532.731 566.47 532.731L278.374 532.73C271.54 532.73 265.221 529.054 261.777 523.073L250.309 503.157C242.894 490.28 224.528 490.28 217.113 503.158L205.646 523.073C202.202 529.055 195.882 532.731 189.048 532.731H33.5389Z" fill="#2072E0"/>
+    </svg>
   </body>
 </html>

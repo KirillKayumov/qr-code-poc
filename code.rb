@@ -40,6 +40,8 @@ qr_html = qr.modules.map.with_index do |row, row_index|
     next "<div class=\"col\"></div>" if (0..6).include?(row_index) && ((qr_size - 7)..(qr_size - 1)).include?(col_index)
     next "<div class=\"col\"></div>" if ((qr_size - 7)..(qr_size - 1)).include?(row_index) && (0..6).include?(col_index)
 
+    next "<div class=\"col\"></div>" if (((qr_size / 2) - 4)..((qr_size / 2) + 4)).include?(row_index) && (((qr_size / 2) - 4)..((qr_size / 2) + 4)).include?(col_index)
+
     "<div class=\"col #{col ? 'filled' : ''} #{vertical_lines_info[row_index][col_index]}\"></div>"
   end.join
 
