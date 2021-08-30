@@ -1,0 +1,44 @@
+# Ignore git files
+.git
+
+# Ignore bundler config
+.bundle
+
+# Ignore all logfiles and tempfiles
+log/*
+tmp/*
+!/tmp/pids
+!log/.keep
+!tmp/.keep
+
+# Ignore uploaded files in development
+storage/*
+
+.byebug_history
+
+# Ignore assets
+public/packs
+public/packs-test
+public/backend/assets
+
+# Ignore packages
+node_modules
+yarn-error.log
+yarn-debug.log*
+.yarn-integrity
+
+# Ignore local env files
+.env*
+
+# Ignore tags files
+tags
+TAGS
+
+# Ignore semaphore cache
+.semaphore-cache
+
+# Ignore ECS config files
+.ecs
+
+# Ignore CI scripts
+scripts/ci
